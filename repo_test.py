@@ -1,3 +1,4 @@
-print("Hello!")
-print("How are you?")
-print ("a")
+
+print("Please inter your name")
+name = input()
+print("hello "+name)
