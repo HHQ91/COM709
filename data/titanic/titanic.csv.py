@@ -22,5 +22,11 @@ try:
 
         print(f"You have selected the option {selection}")
 
+
+        if selection == 1:
+            print("The names of the passengers are...")
+            for record in records:
+                print(record[3])
+
 except IOError:
   print("Error returned")
