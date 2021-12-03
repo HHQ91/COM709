@@ -27,6 +27,13 @@ try:
             print("The names of the passengers are...")
             for record in records:
                 print(record[3])
+        elif selection == 2:
+            num_survived = 0
+            for record in records:
+                if record[1] == '1':
+                    num_survived +=1
+
+            print(f"{num_survived} passengers survived")
 
 except IOError:
   print("Error returned")
