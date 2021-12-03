@@ -43,5 +43,19 @@ try:
 
             print(f"Females: {females}, males: {males}")
 
+        elif selection == 4:
+            children, adults, elderly = 0, 0, 0
+            for record in records:
+                if record[5]:
+                    age = float(record[5])
+                    if age < 18:
+                        children += 1
+                    elif age < 65:
+                        adults += 1
+                    else:
+                        elderly += 1
+
+            print(f"children: {children}, adults: {adults}, elderly: {elderly}")
+
 except IOError:
   print("Error returned")
