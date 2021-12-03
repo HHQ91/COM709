@@ -34,6 +34,14 @@ try:
                     num_survived +=1
 
             print(f"{num_survived} passengers survived")
+        elif selection == 3:
+            females = 0
+            males = 0
+            for record in records:
+                females += 1 if record[4] == "female" else 0
+                males += 1 if record[4] == "male" else 0
+
+            print(f"Females: {females}, males: {males}")
 
 except IOError:
   print("Error returned")
