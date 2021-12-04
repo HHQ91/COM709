@@ -56,6 +56,25 @@ try:
                         elderly += 1
 
             print(f"children: {children}, adults: {adults}, elderly: {elderly}")
+        elif selection == 5:
+            children, adults, elderly = 0, 0, 0
+            children_sur, adults_sur, elderly_sur = 0, 0, 0
+            print(f"childred is {children}")
+            for record in records:
+                if record[5]:
+                    age = float(record[5])
+                    survive = int(record[1])
+                    if age < 18:
+                        children += 1
+                        children_sur +=1 if survive else 0
+                    elif age < 65:
+                        adults += 1
+                        adults_sur += 1 if survive else 0
+                    else:
+                        elderly += 1
+                        elderly_sur += 1 if survive else 0
+
+            print(f"children: {children}/{children_sur}, adults: {adults}/{adults_sur}, elderly: {elderly}/{elderly_sur}")
 
 except IOError:
   print("Error returned")
